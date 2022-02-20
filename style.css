@@ -1,0 +1,83 @@
+
+:root{
+
+    font-size: 15px;
+    
+
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-gray: hsl(212, 45%, 89%);
+    --clr-light-blue: hsl(220, 15%, 55%);
+    --clr-blue: hsl(218, 44%, 22%);
+
+    --fw-primary: 400;
+    --fw-accent: 700;
+}
+
+/*null*/
+
+*,
+*::before,
+*::after{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Outfit', sans-serif;
+}
+
+main{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--clr-light-gray);
+    text-align: center;
+}
+
+.card-container{
+    width: 375px;
+    background-color: var(--clr-white);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    transition: transform 200ms ease-in-out;
+}
+
+.card-container > img {
+    width: 100%;
+    border-radius: 1rem;
+    background-color: var(--clr-light-blue);
+    transition: filter 200ms ease-in-out;
+}
+
+.card-container > img:hover{ 
+    filter: brightness(120%);
+    transition: filter 200ms ease-in-out;
+}
+
+.card-container > h1 {
+    padding-block: 1.5rem;
+    font-size: 1.7rem;
+    color: var(--clr-blue);
+    transition: color 200ms ease-in-out;
+    font-weight: var(--fw-accent);
+}
+
+.card-container > h1:hover{
+    color: var(--clr-light-blue);
+    transition: color 200ms ease-in-out;
+}
+
+.card-container > p {
+    color: var(--clr-light-blue);
+    font-size: 1.1rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    font-weight: var(--fw-primary);
+}
+
+
+@media (min-width:50rem) {
+    .card-container {
+        transform: scale(0.8);
+        transition: transform 200ms ease-in-out;
+    }
+}
